@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useEffect } from "react";
 
-import { ExampleComponent } from 'log-rect'
-import 'log-rect/dist/index.css'
+import { useLogger } from "log-rect";
+import "log-rect/dist/index.css";
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+  const { logger } = useLogger();
 
-export default App
+  useEffect(() => {
+    const interval = setInterval(() => {
+      logger({ type: "INFO", data: ["Hello World"], name: "gjshef" });
+    }, 5 * 1000);
+
+    return () => clearInterval(interval);
+  });
+
+  return <div></div>;
+};
+
+export default App;

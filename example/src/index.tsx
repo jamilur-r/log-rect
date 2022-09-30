@@ -1,7 +1,14 @@
-import './index.css'
+import "./index.css";
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { LogRect } from "log-rect";
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <LogRect mode="DEV">
+    <App />
+  </LogRect>,
+
+  document.getElementById("root")
+);
