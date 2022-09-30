@@ -4,10 +4,18 @@
 
 [![NPM](https://img.shields.io/npm/v/log-rect.svg)](https://www.npmjs.com/package/log-rect) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+[Home Page](https://jamilur-r.github.io/log-rect/)
+
 ## Install
 
 ```bash
 npm install --save log-rect
+```
+
+or
+
+```bash
+yarn add log-rect
 ```
 
 ## Usage

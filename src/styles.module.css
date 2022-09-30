@@ -3,6 +3,27 @@
 .log_rect_provider {
   font-family: "Poppins", sans-serif;
 }
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
 
 button {
   border: none;
@@ -11,6 +32,7 @@ button {
 }
 
 .logger_btn {
+  z-index: 5550;
   padding: 10px 14px;
   border-radius: 4px;
   background-color: #171820;
@@ -29,6 +51,7 @@ button {
 }
 
 .log_menu {
+  z-index: 999;
   width: 320px;
   position: absolute;
   bottom: 70px;
@@ -96,4 +119,5 @@ button {
   padding: 5px 10px;
   box-sizing: border-box;
   margin-bottom: 10px;
+  overflow: auto;
 }

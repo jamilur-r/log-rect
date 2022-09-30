@@ -16,7 +16,7 @@ const Log = () => {
   return (
     <div className={styles.log_rect_provider}>
       {showLogMenu && (
-        <div className={styles.log_menu}>
+        <div className={`${styles.log_menu}`}>
           <div className={styles.tab_wrapper}>
             <button
               className={`${styles.tab} ${
@@ -48,7 +48,7 @@ const Log = () => {
               <p>
                 {formatDate(log.timestamp)} - {log.name}
               </p>
-              <pre>{JSON.stringify(log.data, null, 2)}</pre>
+              <pre>{JSON.stringify(log.data, null, 4)}</pre>
             </div>
           ))}
         </div>
